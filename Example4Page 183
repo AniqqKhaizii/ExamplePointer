@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int b[] = { 10,20,30,40 }, k, offset;
+	int* bPtr = b;
+
+	cout << "Array b printed with:\n";
+	cout << "Array subscript with notation\n";
+
+	for (k = 0; k < 4; k++)
+	{
+		cout << "b[" << k << "]=" << b[k] << endl;
+	}
+
+	cout << "\nPointer/Offset notation where\n";
+	cout << "the pointer is the array name\n";
+
+	for (offset = 0; offset < 4; offset++)
+	{
+		cout << "*(b+" << offset << ")=" << *(b + offset) << "\n";
+	}
+
+	cout << "\nPointer subscript notation\n";
+
+	for (k = 0; k < 4; k++)
+	{
+		cout << "bPtr[" << k << "]=" << bPtr[k] << endl;
+	}
+
+	cout << "\nPointer/Offset notation\n";
+
+	for (offset = 0; offset < 4; offset++)
+	{
+		cout << "*(bPtr+" << offset << ")=" << *(bPtr + offset) << endl;
+	}
+
+	return 0;
+}
